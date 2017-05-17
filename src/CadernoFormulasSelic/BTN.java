@@ -36,5 +36,23 @@ public class BTN {
 	}
 
 
+	public void setJuros(float f) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void setNumeroMeses(int i) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public double getJuros() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
 	
 }

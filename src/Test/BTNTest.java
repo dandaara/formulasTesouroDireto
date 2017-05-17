@@ -45,6 +45,13 @@ public class BTNTest {
 	        assertEquals(0.000000f, btn.getPrecoUnitario(), 0.000001f);
 	    }
 	    
+	    @Test
+	    public void testJuros(){
+	        btn.setPrecoUnitario(2.000000f);
+	        btn.setJuros(1.000000f);
+	        btn.setNumeroMeses(6);
+	        assertEquals(2.000000, btn.getJuros(), 0.000001f);
+	    }
 	    
 
 }
