@@ -15,13 +15,13 @@ public class BTNTest {
 	@Before
 	public void setUP(){
 		btn = new BTN();
-		btn.setTR(0.038800f);
-		btn.setPUant(1.965789f);
 	}
 
 	@Test
 	public void testPrecoUnitarioAtualizado(){
-		assertEquals(0.076400f, btn.getPrecoUnitario(), 0.000001);
+		btn.setTR(0.100000f);
+		btn.setPUant(0.200000f);
+		assertEquals(0.020000f, btn.getPrecoUnitario(), 0.000001f);
 	}
 
 }
