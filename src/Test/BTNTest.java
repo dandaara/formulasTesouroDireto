@@ -53,5 +53,6 @@ public class BTNTest {
 	        assertEquals(2.000000, btn.getJuros(), 0.000001f);
 	    }
 	    
+	    
 
 }

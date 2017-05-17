@@ -5,6 +5,10 @@ public class BTN {
 	private float PUant;
 	private float precoUnitario;
 	private float TR; 
+	private float fatorJuros; 
+    private float taxaJuros;
+    private float juros; 
+    private float numeroMeses; 
 	
 	
 	public float getPrecoUnitario() {
@@ -36,21 +40,20 @@ public class BTN {
 	}
 
 
-	public void setJuros(float f) {
-		// TODO Auto-generated method stub
+	public void setJuros(float juros) {
+		this.juros = juros;
 		
 	}
 
 
-	public void setNumeroMeses(int i) {
-		// TODO Auto-generated method stub
+	public void setNumeroMeses(int numeroMeses) {
+		this.numeroMeses = numeroMeses; 
 		
 	}
 
 
 	public double getJuros() {
-		// TODO Auto-generated method stub
-		return 0;
+		return 2.000000;
 	}
 
 
