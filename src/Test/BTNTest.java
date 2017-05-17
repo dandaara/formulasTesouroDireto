@@ -23,5 +23,28 @@ public class BTNTest {
 		btn.setPUant(0.200000f);
 		assertEquals(0.020000f, btn.getPrecoUnitario(), 0.000001f);
 	}
+	
+	   @Test
+	    public void testPrecoUnitarioAtualizadoValoresAleatorios(){
+	        btn.setTR(0.038800f);
+	        btn.setPUant(1.965789f);
+	        assertEquals(0.076272f, btn.getPrecoUnitario(), 0.000001f);
+	    }
+	    
+	    @Test
+	    public void testPrecoUnitarioAtualizadoValoresMaioresQueZero(){
+	        btn.setTR(1.000000f);
+	        btn.setPUant(2.000000f);
+	        assertEquals(2.000000f, btn.getPrecoUnitario(), 0.000001f);
+	    }
+	    
+	    @Test
+	    public void testPrecoUnitarioAtualizadoValoresIguaisAZero(){
+	        btn.setTR(0.000000f);
+	        btn.setPUant(2.000000f);
+	        assertEquals(0.000000f, btn.getPrecoUnitario(), 0.000001f);
+	    }
+	    
+	    
 
 }
