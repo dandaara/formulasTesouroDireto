@@ -104,7 +104,5 @@ public class BTNTest {
 	        btn.setQuantidade(20);
 	        assertEquals(90.397994, btn.calculaValorPrincipal(), 0.000001f);
 	    }    
-	    
-	    
 
 }
