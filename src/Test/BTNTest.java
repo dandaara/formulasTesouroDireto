@@ -84,7 +84,7 @@ public class BTNTest {
 	        btn.setPrecoUnitarioDolar(7.000000f);
 	        btn.setDeflator( 0.772f);
 	        btn.setQuantidade(20);
-	        assertEquals(108.080000, btn.calculaValorPrincipal(), 0.000001f);
+	        assertEquals(108.080001, btn.calculaValorPrincipal(), 0.000001f);
 	    }
 	    
 	    @Test
@@ -93,7 +93,7 @@ public class BTNTest {
 	        btn.setPrecoUnitarioDolar(7.000000f);
 	        btn.setDeflator( 0.7852f);
 	        btn.setQuantidade(20);
-	        assertEquals(109.928000, btn.calculaValorPrincipal(), 0.000001f);
+	        assertEquals(109.927993, btn.calculaValorPrincipal(), 0.000001f);
 	    }
 	    
 	    @Test
@@ -102,7 +102,7 @@ public class BTNTest {
 	        btn.setPrecoUnitarioDolar(7.000000f);
 	        btn.setDeflator(0.6457f);
 	        btn.setQuantidade(20);
-	        assertEquals(90.398000, btn.calculaValorPrincipal(), 0.000001f);
+	        assertEquals(90.397994, btn.calculaValorPrincipal(), 0.000001f);
 	    }    
 	    
 	    

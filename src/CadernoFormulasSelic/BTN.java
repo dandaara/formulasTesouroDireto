@@ -7,11 +7,14 @@ public class BTN {
 
 	private float PUant;
 	private float precoUnitario;
+	private float precoUnitarioDolar;
 	private float TR; 
 	private float fatorJuros; 
     private float taxaJuros;
     private float juros; 
     private float numeroMeses; 
+    private float deflator;
+    private int quantidade;
 	
 	
 	public float calculaPrecoUnitario() {
@@ -89,24 +92,26 @@ public class BTN {
 		
 	}
 
-	public void setPrecoUnitarioDolar(float f) {
-		// TODO Auto-generated method stub
+	public void setPrecoUnitarioDolar(float dolar) {
+		this.precoUnitarioDolar = dolar;
 		
 	}
 
-	public void setDeflator(float f) {
-		// TODO Auto-generated method stub
+	public void setDeflator(float deflator) {
+		this.deflator=deflator;
 		
 	}
 
-	public void setQuantidade(int i) {
-		// TODO Auto-generated method stub
+	public void setQuantidade(int quantidade) {
+		this.quantidade=quantidade;
 		
 	}
 
 	public double calculaValorPrincipal() {
-		// TODO Auto-generated method stub
-		return 0;
+		if(this.precoUnitario<this.precoUnitarioDolar){
+			return (this.precoUnitarioDolar*this.deflator*this.quantidade);
+		}
+		return this.precoUnitario*this.quantidade;
 	}
 
 }
