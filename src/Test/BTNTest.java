@@ -69,6 +69,42 @@ public class BTNTest {
 	        assertEquals(2400.000000, btn.getJuros(), 0.000001f);
 	    }
 	    
+	    @Test
+	    public void testValorPrincipal(){
+	        btn.setPrecoUnitario(5.000000f);
+	        btn.setPrecoUnitarioDolar(2.000000f);
+	        btn.setDeflator( 0.772f);
+	        btn.setQuantidade(15);
+	        assertEquals(75.000000, btn.calculaValorPrincipal(), 0.000001f);
+	    }
+	    
+	    @Test
+	    public void testValorPrincipalPrecoUnitarioDolarDeflator1(){
+	        btn.setPrecoUnitario(5.000000f);
+	        btn.setPrecoUnitarioDolar(7.000000f);
+	        btn.setDeflator( 0.772f);
+	        btn.setQuantidade(20);
+	        assertEquals(108.080000, btn.calculaValorPrincipal(), 0.000001f);
+	    }
+	    
+	    @Test
+	    public void testValorPrincipalPrecoUnitarioDolarDeflator2(){
+	        btn.setPrecoUnitario(5.000000f);
+	        btn.setPrecoUnitarioDolar(7.000000f);
+	        btn.setDeflator( 0.7852f);
+	        btn.setQuantidade(20);
+	        assertEquals(109.928000, btn.calculaValorPrincipal(), 0.000001f);
+	    }
+	    
+	    @Test
+	    public void testValorPrincipalPrecoUnitarioDolarDeflator3(){
+	        btn.setPrecoUnitario(5.000000f);
+	        btn.setPrecoUnitarioDolar(7.000000f);
+	        btn.setDeflator(0.6457f);
+	        btn.setQuantidade(20);
+	        assertEquals(90.398000, btn.calculaValorPrincipal(), 0.000001f);
+	    }    
+	    
 	    
 
 }

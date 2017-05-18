@@ -89,4 +89,24 @@ public class BTN {
 		
 	}
 
+	public void setPrecoUnitarioDolar(float f) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setDeflator(float f) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setQuantidade(int i) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public double calculaValorPrincipal() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
