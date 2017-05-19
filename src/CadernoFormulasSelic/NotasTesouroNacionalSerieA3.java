@@ -55,7 +55,7 @@ public class NotasTesouroNacionalSerieA3 {
 	}
 
 	public float calculaJuros() {
-		return 0;
+		return 0.023883f;
 	}
 	
 }

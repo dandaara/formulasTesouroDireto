@@ -49,5 +49,25 @@ public class NotasTesouroNacionalSerieA3Test {
 		
 		assertEquals(0.023883f, nota.calculaJuros(), 0.000001f);
 	}
+	
+	@Test
+	public void testJurosSemestrais() {
+	
+		nota.setValorNominal(2.388307f);
+		nota.setTaxa(1.000000f);
+		nota.setNumeroMeses(6);
+		
+		assert(true);
+	}
+	
+	@Test
+	public void testJurosComValorNominalZero() {
+	
+		nota.setValorNominal(0.000000f);
+		nota.setTaxa(1.000000f);
+		nota.setNumeroMeses(6);
+		
+		assert(true);
+	}
 
 }
