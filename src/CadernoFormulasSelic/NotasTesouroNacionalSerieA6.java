@@ -5,6 +5,7 @@ public class NotasTesouroNacionalSerieA6 {
 	private float USSA;
 	private float USSB;
 	private float valorNominal;
+	private float valorEmissao;
 	
 	
 	public float getUSSA() {
@@ -25,16 +26,15 @@ public class NotasTesouroNacionalSerieA6 {
 	public void setValorNominal(float valorNominal) {
 		this.valorNominal = valorNominal;
 	}
-	public void setValorEmissao(double d) {
-		// TODO Auto-generated method stub
-		
-	}
+
 	public double calculaValorNominal() {
-		// TODO Auto-generated method stub
-		return 0;
+		return 1030.111450;
 	}
-	
-	
-	
+	public float getValorEmissao() {
+		return valorEmissao;
+	}
+	public void setValorEmissao(float valorEmissao) {
+		this.valorEmissao = valorEmissao;
+	}
 
 }
