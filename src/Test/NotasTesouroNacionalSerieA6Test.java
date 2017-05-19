@@ -53,14 +53,14 @@ public class NotasTesouroNacionalSerieA6Test {
 	}
 	
 	@Test
-	public void testJurosComDatasFatorIgual() {
-		String dtp= "2014-06-15T08:00:55Z";
+	public void testJurosComDiferencaDeDatasMaiorQueUmAno() {
+		String dtp= "2017-06-15T08:00:55Z";
 		String dtup= "2014-06-15T08:00:55Z";
 		float taxa = 2.200000f;
 		
 		nota.setValorNominal(2.388307f);
 		nota.setFator(nota.calculaFator(dtp,dtup,taxa));
-		assert(true);
+		assertNotEquals(0.159963f, nota.calculaJuros(), 0.000001f);
 	}
 	
 	@Test
@@ -71,7 +71,7 @@ public class NotasTesouroNacionalSerieA6Test {
 		
 		nota.setValorNominal(0.000000f);
 		nota.setFator(nota.calculaFator(dtp,dtup,taxa));
-		assert(true);
+		assertEquals(0.000000f, nota.calculaJuros(), 0.000001f);
 	}
 
 

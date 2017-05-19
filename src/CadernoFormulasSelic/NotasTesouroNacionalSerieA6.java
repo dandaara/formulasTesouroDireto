@@ -48,12 +48,27 @@ public class NotasTesouroNacionalSerieA6 {
 		this.fator = fator;
 	}
 	
-	public float calculaFator(String dtp, String dtup, float taxa) {	
-		return 0;
+	public float calculaFator(String dtp, String dtup, float taxa) {
+		float fator = ((calculaSubtracaodatas(dtp,dtup)/360)*(taxa/100));
+		return fator;
+	}
+	
+	private float calculaSubtracaodatas(String dtp, String dtup) {
+
+		DateTime dtp1 = new DateTime(DateTime.parse(dtp));
+		DateTime dtup2 = new DateTime(DateTime.parse(dtup)); 
+		Duration dur = new Duration(dtp1, dtup2);
+		
+		System.out.println(dur.getStandardDays());
+		
+		float dias= dur.getStandardDays();
+		return dias;
+	}
+	
+	public float calculaJuros() {
+		return this.getValorNominal()*this.getFator();
 	}
 
-	public float calculaJuros() {
-		return 0.002229f;
-	}
+
 
 }
