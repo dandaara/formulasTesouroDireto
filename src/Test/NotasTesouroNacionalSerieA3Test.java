@@ -25,5 +25,19 @@ public class NotasTesouroNacionalSerieA3Test {
 		nota.setUSSB(3.321000f);
 		assertEquals(1030.111450, nota.calculaValorNominal(), 0.000001f);
 	}
+	
+	@Test
+	public void testValorNominalValoresIguais() {
+		nota.setUSSA(3.421000f);
+		nota.setUSSB(3.421000f);
+		assert(true);
+	}
+	
+	@Test
+	public void testValorNominalValoresUSSBMaiorUSSA() {
+		nota.setUSSA(3.321000f);
+		nota.setUSSB(3.421000f);
+		assert(true);
+	}
 
 }

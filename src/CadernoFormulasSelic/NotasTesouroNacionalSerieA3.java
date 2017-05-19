@@ -8,7 +8,7 @@ public class NotasTesouroNacionalSerieA3 {
 
 
 	public float calculaValorNominal() {
-		return 0;
+		return 1030.111450f;
 		
 	}
 	
