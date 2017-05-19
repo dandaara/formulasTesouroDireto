@@ -51,5 +51,28 @@ public class NotasTesouroNacionalSerieA6Test {
 		nota.setFator(nota.calculaFator(dtp,dtup,taxa));
 		assertEquals(0.002229f, nota.calculaJuros(), 0.000001f);
 	}
+	
+	@Test
+	public void testJurosComDatasFatorIgual() {
+		String dtp= "2014-06-15T08:00:55Z";
+		String dtup= "2014-06-15T08:00:55Z";
+		float taxa = 2.200000f;
+		
+		nota.setValorNominal(2.388307f);
+		nota.setFator(nota.calculaFator(dtp,dtup,taxa));
+		assert(true);
+	}
+	
+	@Test
+	public void testJurosComValorNominalZero() {
+		String dtp= "2014-06-15T08:00:55Z";
+		String dtup= "2014-07-13T08:00:55Z";
+		float taxa = 1.200000f;
+		
+		nota.setValorNominal(0.000000f);
+		nota.setFator(nota.calculaFator(dtp,dtup,taxa));
+		assert(true);
+	}
+
 
 }
