@@ -33,13 +33,11 @@ public class NotasTesouroNacionalSerieA1 {
 	
 	
 	public float calculaPrecoUnitarioAmortizado() {
-		return 0.412044456f;
+		return (getUSSA()/getUSSB())*calculaValorLiquido();
 	}
 	
 	public float calculaValorLiquido() {
-		return 0;
+		return getValorEmissao()*getPercentualAmortizacao();
 	}
-	
-	
 
 }

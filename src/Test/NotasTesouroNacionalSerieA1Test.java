@@ -20,7 +20,7 @@ public class NotasTesouroNacionalSerieA1Test {
 	}
 
 	@Test
-	public void testPrecoUnitarioAmortizacao() {
+	public void testPrecoUnitarioAmortizado() {
 		nota.setUSSA(3.421000f);
 		nota.setUSSB(3.321000f);
 		nota.setValorEmissao(2.000000f);
@@ -43,7 +43,7 @@ public class NotasTesouroNacionalSerieA1Test {
 		nota.setUSSB(3.421000f);
 		nota.setValorEmissao(2.000000f);
 		nota.setPercentualAmortizacao(0.200000f);
-		assertEquals(0.412044456f, nota.calculaPrecoUnitarioAmortizado(), 0.000001f);
+		assertEquals(0.400000f, nota.calculaPrecoUnitarioAmortizado(), 0.000001f);
 	}
 	
 	@Test
@@ -52,7 +52,7 @@ public class NotasTesouroNacionalSerieA1Test {
 		nota.setUSSB(3.421000f);
 		nota.setValorEmissao(2.000000f);
 		nota.setPercentualAmortizacao(0.200000f);
-		assertEquals(0.412044456f, nota.calculaPrecoUnitarioAmortizado(), 0.000001f);
+		assertEquals(0.388307f, nota.calculaPrecoUnitarioAmortizado(), 0.000001f);
 	}
 
 }
