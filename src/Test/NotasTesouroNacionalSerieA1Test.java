@@ -59,56 +59,59 @@ public class NotasTesouroNacionalSerieA1Test {
 	public void testJuros() {
 		String dtp= "2014-06-15T08:00:55Z";
 		String dtup= "2014-07-13T08:00:55Z";
-		float taxa = 0.200000f;
+		float taxa = 1.200000f;
 		
-		nota.setPrecoUnitarioAmortizado(0.388307f);
+		nota.setPrecoUnitarioAmortizado(2.388307f);
+		nota.setFator(0);
 		nota.addFator(dtp,dtup,taxa);
 		
-		assertEquals(0.388307f, nota.calculaJuros(), 0.000001f);
+		assertEquals(0.002229f, nota.calculaJuros(), 0.000001f);
 	}
 	
 	@Test
 	public void testJurosComVariosFatores() {
 		String dtp1= "2014-06-15T08:00:55Z";
 		String dtup1= "2014-07-13T08:00:55Z";
-		float taxa1 = 0.200000f;
+		float taxa1 = 1.200000f;
 		
 		String dtp2= "2014-06-15T08:00:55Z";
 		String dtup2= "2014-07-13T08:00:55Z";
-		float taxa2 = 0.200000f;
+		float taxa2 = 1.200000f;
 		
 		String dtp3= "2014-06-15T08:00:55Z";
 		String dtup3= "2014-07-13T08:00:55Z";
-		float taxa3 = 0.200000f;
+		float taxa3 = 1.200000f;
 		
 		
 		nota.setPrecoUnitarioAmortizado(0.388307f);
+		nota.setFator(0);
 		nota.addFator(dtp1,dtup1,taxa1);
 		nota.addFator(dtp2,dtup2,taxa2);
 		nota.addFator(dtp2,dtup2,taxa3);
-		assertEquals(0.388307f, nota.calculaJuros(), 0.000001f);
+		assertEquals(0.001087f, nota.calculaJuros(), 0.000001f);
 	}
 	
 	@Test
 	public void testJurosComPrecoUnitarioZero() {
 		String dtp1= "2014-06-15T08:00:55Z";
 		String dtup1= "2014-07-13T08:00:55Z";
-		float taxa1 = 0.200000f;
+		float taxa1 = 1.200000f;
 		
 		String dtp2= "2014-06-15T08:00:55Z";
 		String dtup2= "2014-07-13T08:00:55Z";
-		float taxa2 = 0.200000f;
+		float taxa2 = 1.200000f;
 		
 		String dtp3= "2014-06-15T08:00:55Z";
 		String dtup3= "2014-07-13T08:00:55Z";
-		float taxa3 = 0.200000f;
+		float taxa3 = 1.200000f;
 		
 		
 		nota.setPrecoUnitarioAmortizado(0.0000f);
+		nota.setFator(0);
 		nota.addFator(dtp1,dtup1,taxa1);
 		nota.addFator(dtp2,dtup2,taxa2);
 		nota.addFator(dtp2,dtup2,taxa3);
-		assertEquals(0.388307f, nota.calculaJuros(), 0.000001f);
+		assertEquals(0.000000f, nota.calculaJuros(), 0.000001f);
 	}
 
 }

@@ -1,5 +1,8 @@
 package CadernoFormulasSelic;
 
+import org.joda.time.DateTime;
+import org.joda.time.Duration;
+
 public class NotasTesouroNacionalSerieA1 {
 	
 	private float USSA;
@@ -10,7 +13,9 @@ public class NotasTesouroNacionalSerieA1 {
 	private float fator;
 	
 	
-	
+	public NotasTesouroNacionalSerieA1() {
+		
+	}
 	
 	public float getUSSA() {
 		return USSA;
@@ -54,17 +59,38 @@ public class NotasTesouroNacionalSerieA1 {
 	public float calculaValorLiquido() {
 		return getValorEmissao()*getPercentualAmortizacao();
 	}
+	
 	public void setPrecoUnitarioAmortizado(float precoUnitario) {
-		
+		this.precoUnitarioAmortizado= precoUnitario;
 		
 	}
 	public void addFator(String dtp, String dtup, float taxa) {
-		// TODO Auto-generated method stub
+		System.out.println("Calccula: "+calculaFator(dtp, dtup, taxa)+ " ");
+		this.fator = this.fator + calculaFator(dtp, dtup, taxa);
+		System.out.println("Fator: "+this.fator+ " ");
 		
 	}
+	private float calculaFator(String dtp, String dtup, float taxa) {
+		float fator = ((calculaSubtracaodatas(dtp,dtup)/360)*(taxa/100));
+		return fator;
+	}
+
+	private float calculaSubtracaodatas(String dtp, String dtup) {
+		DateTime dtp1 = new DateTime(DateTime.parse(dtp)); 
+        DateTime dtup2 = new DateTime(DateTime.parse(dtup)); 
+
+        Duration dur = new Duration(dtp1, dtup2); 
+
+        System.out.println(dur.getStandardDays());
+        float dias= dur.getStandardDays();
+        
+		return dias;
+	}
+
 	public float calculaJuros() {
-		// TODO Auto-generated method stub
-		return 0.388307f;
+		System.out.println("PU "+getPrecoUnitarioAmortizado()+ " ");
+		System.out.println("FatorFinal "+this.getFator()+ " ");
+		return this.getPrecoUnitarioAmortizado()*this.getFator();
 	}
 
 }
