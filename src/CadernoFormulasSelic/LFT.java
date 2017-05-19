@@ -31,9 +31,12 @@ public class LFT {
 		this.c = c;
 	}
 	
-	
 	public void calculaValorNominal(){
 		setVNA(VNb * c);
+	}
+	
+	public void calculaFator(){
+		setC(0.0001f);
 	}
 	
 	

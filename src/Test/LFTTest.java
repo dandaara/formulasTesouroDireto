@@ -27,6 +27,7 @@ public class LFTTest {
 	
 	@Test
 	public void testCalculoFator(){
+		lft.calculaFator();
 		assertEquals(0.0001f, lft.getC(), 0.0001f);
 	}
 
