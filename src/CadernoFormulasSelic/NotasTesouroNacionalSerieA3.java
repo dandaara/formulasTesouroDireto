@@ -8,7 +8,7 @@ public class NotasTesouroNacionalSerieA3 {
 
 
 	public float calculaValorNominal() {
-		return 1030.111450f;
+		return (this.getUSSA()/this.getUSSB())*1000.0000000f;
 		
 	}
 	

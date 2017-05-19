@@ -30,14 +30,14 @@ public class NotasTesouroNacionalSerieA3Test {
 	public void testValorNominalValoresIguais() {
 		nota.setUSSA(3.421000f);
 		nota.setUSSB(3.421000f);
-		assert(true);
+		assertEquals(1000.000000f, nota.calculaValorNominal(), 0.000001f);
 	}
 	
 	@Test
 	public void testValorNominalValoresUSSBMaiorUSSA() {
 		nota.setUSSA(3.321000f);
 		nota.setUSSB(3.421000f);
-		assert(true);
+		assertEquals(970.768800f, nota.calculaValorNominal(), 0.000001f);
 	}
 
 }
