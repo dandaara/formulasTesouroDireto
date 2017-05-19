@@ -39,5 +39,15 @@ public class NotasTesouroNacionalSerieA3Test {
 		nota.setUSSB(3.421000f);
 		assertEquals(970.768800f, nota.calculaValorNominal(), 0.000001f);
 	}
+	
+	@Test
+	public void testJuros() {
+	
+		nota.setValorNominal(2.388307f);
+		nota.setTaxa(1.000000f);
+		nota.setNumeroMeses(12);
+		
+		assertEquals(0.023883f, nota.calculaJuros(), 0.000001f);
+	}
 
 }

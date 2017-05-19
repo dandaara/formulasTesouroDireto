@@ -5,6 +5,8 @@ public class NotasTesouroNacionalSerieA3 {
 	private float USSA;
 	private float USSB;
 	private float valorNominal;
+	private float taxa;
+	private float numeroMeses;
 
 
 	public float calculaValorNominal() {
@@ -34,6 +36,26 @@ public class NotasTesouroNacionalSerieA3 {
 
 	public float getUSSB() {
 		return USSB;
+	}
+
+	public float getTaxa() {
+		return taxa;
+	}
+
+	public void setTaxa(float taxa) {
+		this.taxa = taxa;
+	}
+
+	public float getNumeroMeses() {
+		return numeroMeses;
+	}
+
+	public void setNumeroMeses(float numeroMeses) {
+		this.numeroMeses = numeroMeses;
+	}
+
+	public float calculaJuros() {
+		return 0;
 	}
 	
 }
