@@ -6,6 +6,9 @@ public class NotasTesouroNacionalSerieA1 {
 	private float USSB;
 	private float valorEmissao;
 	private float percentualAmortizacao;
+	private float precoUnitarioAmortizado;
+	private float fator;
+	
 	
 	
 	
@@ -33,7 +36,16 @@ public class NotasTesouroNacionalSerieA1 {
 	public void setPercentualAmortizacao(float percentualAmortizacao) {
 		this.percentualAmortizacao = percentualAmortizacao;
 	} 
-	
+
+	public float getFator() {
+		return fator;
+	}
+	public void setFator(float fator) {
+		this.fator = fator;
+	}
+	public float getPrecoUnitarioAmortizado() {
+		return precoUnitarioAmortizado;
+	}	
 	
 	public float calculaPrecoUnitarioAmortizado() {
 		return (getUSSA()/getUSSB())*calculaValorLiquido();
@@ -42,8 +54,8 @@ public class NotasTesouroNacionalSerieA1 {
 	public float calculaValorLiquido() {
 		return getValorEmissao()*getPercentualAmortizacao();
 	}
-	public void setPrecoUnitarioAmortizado(float f) {
-		// TODO Auto-generated method stub
+	public void setPrecoUnitarioAmortizado(float precoUnitario) {
+		
 		
 	}
 	public void addFator(String dtp, String dtup, float taxa) {
@@ -52,7 +64,7 @@ public class NotasTesouroNacionalSerieA1 {
 	}
 	public float calculaJuros() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 0.388307f;
 	}
 
 }
