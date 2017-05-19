@@ -28,7 +28,7 @@ public class NotasTesouroNacionalSerieA6 {
 	}
 
 	public double calculaValorNominal() {
-		return 1030.111450;
+		return ((this.getUSSA()/this.getUSSB())*this.getValorEmissao());
 	}
 	public float getValorEmissao() {
 		return valorEmissao;
