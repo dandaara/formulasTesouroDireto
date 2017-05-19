@@ -56,8 +56,7 @@ public class NotasTesouroNacionalSerieA3Test {
 		nota.setValorNominal(2.388307f);
 		nota.setTaxa(1.000000f);
 		nota.setNumeroMeses(6);
-		
-		assert(true);
+		assertEquals(0.011941f, nota.calculaJuros(), 0.000001f);
 	}
 	
 	@Test
@@ -66,8 +65,7 @@ public class NotasTesouroNacionalSerieA3Test {
 		nota.setValorNominal(0.000000f);
 		nota.setTaxa(1.000000f);
 		nota.setNumeroMeses(6);
-		
-		assert(true);
+		assertEquals(0.000000f, nota.calculaJuros(), 0.000001f);
 	}
 
 }

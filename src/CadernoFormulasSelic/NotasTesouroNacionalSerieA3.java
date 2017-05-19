@@ -55,7 +55,14 @@ public class NotasTesouroNacionalSerieA3 {
 	}
 
 	public float calculaJuros() {
-		return 0.023883f;
+		return (this.getValorNominal()*calculaFator());
+
+	}
+
+	private float calculaFator() {
+		
+	return ((this.getTaxa()/100)*(this.getNumeroMeses()/12));
+
 	}
 	
 }
