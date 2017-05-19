@@ -6,31 +6,53 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import CadernoFormulasSelic.NotasTesouroNacionalSerieA1;
+
 public class NotasTesouroNacionalSerieA1Test {
 
 
+	NotasTesouroNacionalSerieA1 nota; 
+	
 	@Before
 	public void setUp() throws Exception {
+		
+		nota = new NotasTesouroNacionalSerieA1();
 	}
 
 	@Test
 	public void testPrecoUnitarioAmortizacao() {
-		fail("Not yet implemented");
+		nota.setUSSA(3.421000f);
+		nota.setUSSB(3.321000f);
+		nota.setValorEmissao(2.000000f);
+		nota.setPercentualAmortizacao(0.200000f);
+		assertEquals(0.412044456f, nota.calculaPrecoUnitarioAmortizado(), 0.000001f);
 	}
 	
 	@Test
 	public void testPrecoUnitarioAmortizacaoIgualZero() {
-		fail("Not yet implemented");
+		nota.setUSSA(3.421000f);
+		nota.setUSSB(3.321000f);
+		nota.setValorEmissao(2.000000f);
+		nota.setPercentualAmortizacao(0.200000f);
+		assertEquals(0.412044456f, nota.calculaPrecoUnitarioAmortizado(), 0.000001f);
 	}
 	
 	@Test
 	public void testPrecoUnitarioAmortizacaoValoresIguais() {
-		fail("Not yet implemented");
+		nota.setUSSA(3.421000f);
+		nota.setUSSB(3.421000f);
+		nota.setValorEmissao(2.000000f);
+		nota.setPercentualAmortizacao(0.200000f);
+		assertEquals(0.412044456f, nota.calculaPrecoUnitarioAmortizado(), 0.000001f);
 	}
 	
 	@Test
 	public void testPrecoUnitarioAmortizacaoValoresUSSBMaiorUSSA() {
-		fail("Not yet implemented");
+		nota.setUSSA(3.321000f);
+		nota.setUSSB(3.421000f);
+		nota.setValorEmissao(2.000000f);
+		nota.setPercentualAmortizacao(0.200000f);
+		assertEquals(0.412044456f, nota.calculaPrecoUnitarioAmortizado(), 0.000001f);
 	}
 
 }
