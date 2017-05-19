@@ -1,11 +1,15 @@
 package CadernoFormulasSelic;
 
+import org.joda.time.DateTime;
+import org.joda.time.Duration;
+
 public class NotasTesouroNacionalSerieA6 {
 	
 	private float USSA;
 	private float USSB;
 	private float valorNominal;
 	private float valorEmissao;
+	private float fator;
 	
 	
 	public float getUSSA() {
@@ -35,6 +39,21 @@ public class NotasTesouroNacionalSerieA6 {
 	}
 	public void setValorEmissao(float valorEmissao) {
 		this.valorEmissao = valorEmissao;
+	}
+	
+	public float getFator() {
+		return fator;
+	}
+	public void setFator(float fator) {
+		this.fator = fator;
+	}
+	
+	public float calculaFator(String dtp, String dtup, float taxa) {	
+		return 0;
+	}
+
+	public float calculaJuros() {
+		return 0;
 	}
 
 }
