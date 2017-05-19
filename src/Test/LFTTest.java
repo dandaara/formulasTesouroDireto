@@ -8,17 +8,20 @@ import org.junit.Test;
 import CadernoFormulasSelic.LFT;
 
 public class LFTTest {
+	
+	LFT lft;
 
 	@Before
 	public void setUp() throws Exception {
-		LFT lft = new CadernoFormulasSelic.LFT();
+		lft = new CadernoFormulasSelic.LFT();
+		lft.setC(0.123456f);
+		lft.setVNb(0.98765432f);
 	}
 
 	@Test
 	public void testCalculaValorNominal() {
-		
-		assertEquals(0.000000f, LFT.calculaValorNominal(), 0.1f);
-		
+		lft.calculaValorNominal();
+		assertEquals(0.121932f, lft.getVNA(), 0.01f);
 		
 	}
 
