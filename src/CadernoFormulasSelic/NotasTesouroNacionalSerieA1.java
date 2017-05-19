@@ -6,6 +6,9 @@ public class NotasTesouroNacionalSerieA1 {
 	private float USSB;
 	private float valorEmissao;
 	private float percentualAmortizacao;
+	
+	
+	
 	public float getUSSA() {
 		return USSA;
 	}
@@ -38,6 +41,18 @@ public class NotasTesouroNacionalSerieA1 {
 	
 	public float calculaValorLiquido() {
 		return getValorEmissao()*getPercentualAmortizacao();
+	}
+	public void setPrecoUnitarioAmortizado(float f) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void addFator(String dtp, String dtup, float taxa) {
+		// TODO Auto-generated method stub
+		
+	}
+	public float calculaJuros() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
