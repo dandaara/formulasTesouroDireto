@@ -19,10 +19,15 @@ public class LFTTest {
 	}
 
 	@Test
-	public void testCalculaValorNominal() {
+	public void testCalculoValorNominal() {
 		lft.calculaValorNominal();
-		assertEquals(0.121932f, lft.getVNA(), 0.01f);
+		assertEquals(0.121932f, lft.getVNA(), 0.000001f);
 		
+	}
+	
+	@Test
+	public void testCalculoFator(){
+		assertEquals(0.0001f, lft.getC(), 0.0001f);
 	}
 
 }
