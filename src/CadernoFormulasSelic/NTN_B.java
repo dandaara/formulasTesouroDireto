@@ -28,5 +28,9 @@ public class NTN_B {
 	private float calculaFator() {
 		return (float) Math.pow((float)IPCAt1/IPCAt0, (float)dc/dct);
 	}
+	
+	public float getJuros(){
+		return 0.0f;
+	}
 
 }
