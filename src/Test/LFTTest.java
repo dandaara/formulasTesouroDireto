@@ -2,6 +2,8 @@ package Test;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,9 +15,7 @@ public class LFTTest {
 
 	@Before
 	public void setUp() throws Exception {
-		lft = new CadernoFormulasSelic.LFT();
-		lft.setC(0.123456f);
-		lft.setVNb(0.98765432f);
+		lft = new CadernoFormulasSelic.LFT(0.98765432f,0.123456f);
 	}
 
 	@Test
@@ -27,8 +27,14 @@ public class LFTTest {
 	
 	@Test
 	public void testCalculoFator(){
-		lft.calculaFator();
-		assertEquals(0.0001f, lft.getC(), 0.0001f);
+		
+		ArrayList<Float> taxas = new ArrayList<Float>();
+		taxas.add(14.50f);
+		taxas.add(12.50f);
+		taxas.add(10.25f);
+		
+		lft.calculaFator(taxas);
+		assertEquals(1.00139290f, lft.getC(), 0.00000001f);
 	}
 
 }
