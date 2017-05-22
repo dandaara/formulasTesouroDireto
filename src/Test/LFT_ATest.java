@@ -24,6 +24,13 @@ public class LFT_ATest {
 	int n;
 	float expected;
 	
+	float VNA_jur;
+	float fator_jur;
+	float i_jur;
+	int n_jur;
+	int dc_jur;
+	int dcp_jur;
+	
 	public LFT_ATest(float vE, float c, int du, int dut, int p, int n, float expected) {
 		this.VE = vE;
 		this.c = c;
@@ -32,6 +39,8 @@ public class LFT_ATest {
 		this.p = p;
 		this.n = n;
 		this.expected = expected;
+		
+		
 	}
 	
 	@Parameters
