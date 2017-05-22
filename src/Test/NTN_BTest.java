@@ -58,5 +58,10 @@ public class NTN_BTest {
 	public void testValorNominal() {
 		assertEquals(expected, ntn_b.getVNA(), 0.000001f);
 	}
+	
+	@Test
+	public void testJuros(){
+		assertEquals(0.123123f, ntn_b.getJuros(), 0.000001f);
+	}
 
 }
