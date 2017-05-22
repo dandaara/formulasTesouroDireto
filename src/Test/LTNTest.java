@@ -13,7 +13,7 @@ public class LTNTest {
 
 	@Before
 	public void setUp() throws Exception {
-		ltn = new LTN();
+		ltn = new LTN(10.10);
 	}
 
 	@Test
