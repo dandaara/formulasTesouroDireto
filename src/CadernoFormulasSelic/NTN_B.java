@@ -10,13 +10,26 @@ public class NTN_B {
 	private int dc;
 	private int dct;
 	
-	public NTN_B(float iPCAt, float iPCAt0, float iPCAt1, float vN, int dc, int dct) {
+	float VNA_juros;
+	float i_juros;
+	int n_juros;
+	int dcp_juros;
+	int dct_juros;
+	
+	public NTN_B(float iPCAt, float iPCAt0, float iPCAt1, float vN, int dc, int dct, 
+				float vna, float i_juros, int n_juros, int dcp_juros, int dct_juros) {
 		this.IPCAt = iPCAt;
 		this.IPCAt0 = iPCAt0;
 		this.IPCAt1 = iPCAt1;
 		this.VN = vN;
 		this.dc = dc;
 		this.dct = dct;
+		
+		this.VNA_juros = vna;
+		this.i_juros = i_juros;
+		this.n_juros = n_juros;
+		this.dcp_juros = dcp_juros;
+		this.dct_juros = dct_juros;
 	}
 	
 	public float getVNA(){
@@ -30,7 +43,14 @@ public class NTN_B {
 	}
 	
 	public float getJuros(){
-		return 0.0f;
+		System.out.println(calculaFatorJuros());
+		return VNA_juros * (calculaFatorJuros() - 1);
+	}
+	
+	public float calculaFatorJuros(){
+		return (float) Math.pow(
+				(float) Math.pow((float) (i_juros/100 + 1), (float)n_juros/12), 
+								(float) dcp_juros/dct_juros);
 	}
 
 }
