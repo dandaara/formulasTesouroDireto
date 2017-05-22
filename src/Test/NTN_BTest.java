@@ -14,7 +14,7 @@ public class NTN_BTest {
 	
 	@Before
 	public void setUp() throws Exception {
-		ntn_b = new NTN_B();
+		ntn_b = new NTN_B(5.71f, 4.99f);
 	}
 
 	@Test
